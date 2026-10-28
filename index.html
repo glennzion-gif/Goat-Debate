@@ -1,0 +1,1941 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#bde8ff">
+  <meta name="description" content="The official, highly disputed GOAT debate between Glenn and Emmanuella.">
+  <title>The GOAT Debate 🐐 | Glenn vs Emmanuella</title>
+
+  <style>
+    /* =========================
+       GLOBAL STYLES
+    ========================= */
+    :root {
+      --blue: #bde8ff;
+      --blue-dark: #5ab8ed;
+      --blue-deep: #2479b8;
+      --purple: #8b5cf6;
+      --purple-dark: #6336c9;
+      --purple-light: #eee6ff;
+      --white: #ffffff;
+      --ink: #20213a;
+      --muted: #666982;
+      --pink: #ff8fc7;
+      --border: rgba(77, 80, 130, 0.13);
+      --shadow: 0 15px 45px rgba(59, 80, 145, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fbff;
+      color: var(--ink);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--purple-dark);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.7px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(110deg, var(--blue-deep), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--purple);
+      color: white;
+      font-weight: 750;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: var(--purple-dark);
+      box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+    }
+
+    .btn-blue {
+      background: var(--blue-deep);
+    }
+
+    .btn-blue:hover {
+      background: #165e96;
+    }
+
+    .card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.08rem;
+      font-weight: 950;
+      letter-spacing: -0.6px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #53556e;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: var(--purple-light);
+      color: var(--purple-dark);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 90px;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.95), transparent 26%),
+        radial-gradient(circle at 90% 80%, rgba(180,145,255,.30), transparent 28%),
+        linear-gradient(135deg, #c7edff, #f0eaff 70%, #ffffff);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(139, 92, 246, 0.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 330px;
+      height: 330px;
+      top: -180px;
+      right: 5%;
+    }
+
+    .hero::after {
+      width: 210px;
+      height: 210px;
+      bottom: -130px;
+      left: 4%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 25px;
+      padding: 8px 15px;
+      border: 1px solid rgba(139, 92, 246, 0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      color: var(--purple-dark);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      margin-bottom: 22px;
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      font-weight: 1000;
+      letter-spacing: -4px;
+      line-height: 0.99;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--purple);
+    }
+
+    .hero-description {
+      max-width: 630px;
+      margin: 0 auto 30px;
+      color: #53556e;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 720px;
+      margin: 55px auto 0;
+    }
+
+    .stat {
+      padding: 18px 12px;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 20px;
+      background: rgba(255,255,255,.65);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 1.45rem;
+      font-weight: 950;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* =========================
+       PROFILE / RÉSUMÉ
+    ========================= */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .profile-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--blue-dark), var(--purple));
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 66px;
+      height: 66px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: var(--blue);
+      font-size: 2rem;
+    }
+
+    .avatar.purple {
+      background: var(--purple-light);
+    }
+
+    .profile-top h3 {
+      margin-bottom: 4px;
+      font-size: 1.45rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .profile-label {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--purple-dark);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .credentials {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .credentials li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #454761;
+    }
+
+    .credentials li span {
+      flex-shrink: 0;
+    }
+
+    .disclaimer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    /* =========================
+       THE RIVALRY
+    ========================= */
+    .rivalry-section {
+      background: linear-gradient(180deg, #f0f8ff, #f5f0ff);
+    }
+
+    .versus-grid {
+      display: grid;
+      grid-template-columns: 1fr 100px 1fr;
+      align-items: stretch;
+      gap: 18px;
+    }
+
+    .versus-card {
+      text-align: center;
+    }
+
+    .versus-card h3 {
+      margin: 12px 0 6px;
+      font-size: 1.55rem;
+    }
+
+    .versus-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .versus-icon {
+      width: 90px;
+      height: 90px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 17px;
+      border-radius: 28px;
+      background: var(--blue);
+      font-size: 2.8rem;
+    }
+
+    .versus-icon.emma {
+      background: var(--purple-light);
+    }
+
+    .versus-divider {
+      display: grid;
+      place-items: center;
+      color: var(--purple);
+      font-size: 2rem;
+      font-weight: 1000;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 19px;
+    }
+
+    .tag {
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #edf7ff;
+      color: #276995;
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .tag.purple {
+      background: var(--purple-light);
+      color: var(--purple-dark);
+    }
+
+    .rivalry-verdict {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px dashed rgba(139, 92, 246, .45);
+      border-radius: 18px;
+      background: rgba(255,255,255,.75);
+      text-align: center;
+      color: #555771;
+    }
+
+    /* =========================
+       ROAST GENERATOR
+    ========================= */
+    .roast-card {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 36px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #d9f2ff, #f0e8ff);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .roast-emoji {
+      margin-bottom: 14px;
+      font-size: 3rem;
+    }
+
+    .roast-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+
+    .roast-output {
+      min-height: 95px;
+      display: grid;
+      place-items: center;
+      margin: 24px 0;
+      padding: 22px;
+      border: 1px solid rgba(139,92,246,.12);
+      border-radius: 18px;
+      background: rgba(255,255,255,.82);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      font-weight: 750;
+    }
+
+    .roast-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* =========================
+       POLL
+    ========================= */
+    .poll-section {
+      background: #f1f8ff;
+    }
+
+    .poll-card {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .poll-options {
+      display: grid;
+      gap: 12px;
+      margin: 25px 0 20px;
+    }
+
+    .poll-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 16px 18px;
+      border: 2px solid #e5e6f3;
+      border-radius: 15px;
+      background: white;
+      color: var(--ink);
+      text-align: left;
+      transition: border-color .2s, background .2s, transform .2s;
+    }
+
+    .poll-option:hover:not(:disabled) {
+      transform: translateY(-2px);
+      border-color: var(--purple);
+    }
+
+    .poll-option.selected {
+      border-color: var(--purple);
+      background: #f5f0ff;
+    }
+
+    .poll-option:disabled {
+      cursor: default;
+    }
+
+    .poll-option strong {
+      white-space: nowrap;
+    }
+
+    .poll-bar {
+      height: 8px;
+      overflow: hidden;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: #ececf5;
+    }
+
+    .poll-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue-dark), var(--purple));
+      transition: width .6s ease;
+    }
+
+    .poll-result {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .small-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* =========================
+       QUIZ
+    ========================= */
+    .quiz-card {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .quiz-progress {
+      height: 8px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      border-radius: 999px;
+      background: #ececf5;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue-dark), var(--purple));
+      transition: width .3s;
+    }
+
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .quiz-question {
+      margin-bottom: 22px;
+      font-size: clamp(1.25rem, 3vw, 1.7rem);
+    }
+
+    .quiz-answers {
+      display: grid;
+      gap: 11px;
+    }
+
+    .quiz-answer {
+      padding: 15px 17px;
+      border: 2px solid #e7e7f2;
+      border-radius: 14px;
+      background: white;
+      color: var(--ink);
+      text-align: left;
+      transition: border-color .2s, background .2s;
+    }
+
+    .quiz-answer:hover:not(:disabled) {
+      border-color: var(--purple);
+    }
+
+    .quiz-answer.correct {
+      border-color: #43a77b;
+      background: #e9fff3;
+    }
+
+    .quiz-answer.incorrect {
+      border-color: #ed7790;
+      background: #fff0f3;
+    }
+
+    .quiz-feedback {
+      min-height: 30px;
+      margin: 16px 0;
+      font-weight: 750;
+    }
+
+    .quiz-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .quiz-result {
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    .quiz-result .score {
+      margin: 15px 0;
+      color: var(--purple);
+      font-size: 3.3rem;
+      font-weight: 1000;
+    }
+
+    /* =========================
+       MUSIC SECTION
+    ========================= */
+    .music-section {
+      background: linear-gradient(135deg, #e0f4ff, #f4edff);
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .music-card {
+      padding: 27px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 22px;
+      background: rgba(255,255,255,.83);
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(70, 80, 140, .06);
+      transition: transform .2s;
+    }
+
+    .music-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .music-icon {
+      margin-bottom: 15px;
+      font-size: 2.5rem;
+    }
+
+    .music-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .music-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .music-disclaimer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* =========================
+       THE SOFT SPOT 💜
+    ========================= */
+    .emma-section {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #f5faff, #eee5ff);
+    }
+
+    .emma-love {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 48px);
+      border: 1px solid rgba(139, 92, 246, .15);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .88);
+      box-shadow: 0 20px 55px rgba(100, 75, 160, .10);
+    }
+
+    .emma-love-header {
+      margin-bottom: 27px;
+      text-align: center;
+    }
+
+    .emma-heart {
+      display: inline-grid;
+      width: 72px;
+      height: 72px;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 24px;
+      background: var(--purple-light);
+      font-size: 2.3rem;
+      animation: gentle-pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes gentle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .emma-love-header h2 {
+      margin-bottom: 12px;
+    }
+
+    .emma-love-header p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .emma-message {
+      padding: 24px;
+      border-left: 4px solid var(--purple);
+      border-radius: 0 18px 18px 0;
+      background: linear-gradient(100deg, #f1eaff, #f4faff);
+      font-size: 1.03rem;
+    }
+
+    .emma-message p + p {
+      margin-top: 14px;
+    }
+
+    .emma-traits {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      margin: 25px 0;
+    }
+
+    .emma-trait {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: white;
+    }
+
+    .emma-trait span {
+      font-size: 1.3rem;
+    }
+
+    .emma-trait strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .emma-trait p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .emma-banters {
+      margin: 25px 0;
+      padding: 23px;
+      border-radius: 18px;
+      background: #e9f6ff;
+    }
+
+    .emma-banters h3 {
+      margin-bottom: 12px;
+      color: var(--blue-deep);
+    }
+
+    .emma-banters ul {
+      display: grid;
+      gap: 9px;
+      padding-left: 21px;
+      color: #454761;
+    }
+
+    .emma-verdict {
+      padding: 25px;
+      border-radius: 20px;
+      background: linear-gradient(120deg, #e8f7ff, #eee4ff);
+      text-align: center;
+    }
+
+    .emma-verdict h3 {
+      margin-bottom: 10px;
+    }
+
+    .emma-verdict p {
+      color: #4d4d6b;
+    }
+
+    .emma-signoff {
+      margin-top: 17px;
+      color: var(--purple-dark);
+      font-weight: 850;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      padding: 35px 0;
+      background: #20213a;
+      color: white;
+      text-align: center;
+    }
+
+    footer .footer-title {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    footer p {
+      color: #c5c7dc;
+      font-size: 0.88rem;
+    }
+
+    footer .footer-small {
+      margin-top: 12px;
+      color: #a3a6c1;
+      font-size: 0.76rem;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 9px 15px;
+      border: 1px solid #565878;
+      border-radius: 10px;
+      color: white;
+      font-size: .85rem;
+      transition: background .2s;
+    }
+
+    .back-top:hover {
+      background: #373957;
+    }
+
+    /* =========================
+       LITTLE CELEBRATION
+    ========================= */
+    .celebration {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .confetti {
+      position: absolute;
+      top: -30px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: .8rem;
+      }
+
+      .music-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .nav-inner {
+        min-height: 65px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 18px;
+        border-bottom: 1px solid var(--border);
+        background: white;
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: .95rem;
+      }
+
+      .hero {
+        padding: 78px 0 65px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-stats {
+        gap: 8px;
+        margin-top: 38px;
+      }
+
+      .stat {
+        padding: 14px 7px;
+      }
+
+      .stat strong {
+        font-size: 1.15rem;
+      }
+
+      .stat span {
+        font-size: .72rem;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .versus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .versus-divider {
+        padding: 0;
+        font-size: 1.6rem;
+      }
+
+      .roast-card {
+        padding: 25px 18px;
+      }
+
+      .emma-traits {
+        grid-template-columns: 1fr;
+      }
+
+      .emma-message {
+        padding: 18px;
+      }
+
+      .quiz-footer {
+        align-items: stretch;
+      }
+
+      .quiz-footer .btn {
+        padding: 12px 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">THE GOAT <span>DEBATE 🐐</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#credentials">The Résumé</a>
+        <a href="#rivalry">The Rivalry</a>
+        <a href="#roast">Roast Room</a>
+        <a href="#poll">The Poll</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#emmanuella">The Soft Spot 💜</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container hero-content">
+      <div class="status-pill">
+        <span>●</span> OFFICIAL GOAT DEBATE — RESULTS DISPUTED
+      </div>
+
+      <h1>
+        BUILT
+        <span>DIFFERENT.</span>
+      </h1>
+
+      <p class="hero-description">
+        Two competitors. Two impressive résumés. One extremely unnecessary
+        argument about who is the greatest of all time.
+        One of them is clearly me. The other one is Emmanuella.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#credentials" class="btn">Inspect My Résumé 🏆</a>
+        <a href="#rivalry" class="btn btn-blue">Meet The Competition</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>⚽ U20</strong>
+          <span>Academy football</span>
+        </div>
+        <div class="stat">
+          <strong>🥋 Blue Belt</strong>
+          <span>Brazilian Jiu-Jitsu</span>
+        </div>
+        <div class="stat">
+          <strong>🎮 Elite*</strong>
+          <span>Gaming department</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CREDENTIALS -->
+  <section class="section" id="credentials">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Exhibit A</span>
+        <h2>The <span class="gradient-text">Résumé.</span></h2>
+        <p>
+          A brief review of the evidence. Please remain calm, Emmanuella.
+          The facts may be overwhelming.
+        </p>
+      </div>
+
+      <div class="profile-grid">
+        <article class="card profile-card">
+          <div class="profile-top">
+            <div class="avatar">⚽</div>
+            <div>
+              <h3>Glenn</h3>
+              <p class="subtitle">The alleged undisputed GOAT</p>
+            </div>
+          </div>
+
+          <span class="profile-label">Professional-ish credentials</span>
+          <ul class="credentials">
+            <li><span>⚽</span><div><strong>Football:</strong> U20 academy-level player. The pitch is familiar territory.</div></li>
+            <li><span>🥊</span><div><strong>Boxing:</strong> Has experience throwing hands in a sporting context.</div></li>
+            <li><span>🥋</span><div><strong>BJJ:</strong> Brazilian Jiu-Jitsu blue belt. The ground game is accounted for.</div></li>
+            <li><span>🎮</span><div><strong>Gaming:</strong> Fortnite, Call of Duty, F1 26. Claims superiority across the board.</div></li>
+            <li><span>🎵</span><div><strong>Music:</strong> Afrobeats, R&B, pop and whatever else sounds good.</div></li>
+          </ul>
+
+          <p class="disclaimer">
+            *GOAT status is self-certified. Independent verification is pending.
+          </p>
+        </article>
+
+        <article class="card profile-card">
+          <div class="profile-top">
+            <div class="avatar purple">💜</div>
+            <div>
+              <h3>Emmanuella</h3>
+              <p class="subtitle">The very persistent challenger</p>
+            </div>
+          </div>
+
+          <span class="profile-label">The competition's credentials</span>
+          <ul class="credentials">
+            <li><span>🥋</span><div><strong>Karate:</strong> Red belt. This is not an opponent to underestimate.</div></li>
+            <li><span>😂</span><div><strong>Comedy:</strong> Genuinely funny. Annoyingly effective at it, too.</div></li>
+            <li><span>💗</span><div><strong>Personality:</strong> Caring, thoughtful and an incredible person.</div></li>
+            <li><span>🍳</span><div><strong>Cooking:</strong> Let's call it a work in progress. The kitchen is still in development.</div></li>
+            <li><span>✨</span><div><strong>Overall:</strong> A lot more impressive than this website is willing to admit.</div></li>
+          </ul>
+
+          <p class="disclaimer">
+            Threat assessment: high. Cooking assessment: results may vary.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIVALRY -->
+  <section class="section rivalry-section" id="rivalry">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Head-to-head</span>
+        <h2>The <span class="gradient-text">Rivalry.</span></h2>
+        <p>
+          A comparison of two extraordinary individuals.
+          One of them wrote this website, so please account for possible bias.
+        </p>
+      </div>
+
+      <div class="versus-grid">
+        <article class="card versus-card">
+          <div class="versus-icon">🐐</div>
+          <h3>Glenn</h3>
+          <p>The self-appointed standard of excellence.</p>
+          <div class="tag-row">
+            <span class="tag">Football</span>
+            <span class="tag">Boxing</span>
+            <span class="tag">BJJ</span>
+            <span class="tag">Gaming</span>
+          </div>
+        </article>
+
+        <div class="versus-divider">VS</div>
+
+        <article class="card versus-card">
+          <div class="versus-icon emma">👑</div>
+          <h3>Emmanuella</h3>
+          <p>The challenger with actual reasons to be confident.</p>
+          <div class="tag-row">
+            <span class="tag purple">Karate</span>
+            <span class="tag purple">Humour</span>
+            <span class="tag purple">Kindness</span>
+            <span class="tag purple">Aura</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="rivalry-verdict">
+        <strong>Preliminary verdict:</strong>
+        Glenn wins the argument. Emmanuella wins at being Emmanuella.
+        The court is suspiciously biased, but we move.
+      </div>
+    </div>
+  </section>
+
+  <!-- ROAST GENERATOR -->
+  <section class="section" id="roast">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Friendly fire only</span>
+        <h2>Enter the <span class="gradient-text">Roast Room.</span></h2>
+        <p>
+          The official generator for completely unserious allegations.
+          No actual feelings were harmed in the making of this section.
+        </p>
+      </div>
+
+      <div class="roast-card">
+        <div class="roast-emoji">🎤</div>
+        <h3>Who are we roasting today?</h3>
+        <p>Choose your target. The generator will handle the disrespect.</p>
+
+        <div class="roast-output" id="roastOutput" aria-live="polite">
+          Press a button. Let's see what the evidence says.
+        </div>
+
+        <div class="roast-controls">
+          <button class="btn" id="roastGlenn">Roast Glenn 🐐</button>
+          <button class="btn btn-blue" id="roastEmma">Roast Emmanuella 💜</button>
+          <button class="btn" id="roastBoth">Roast Both 💀</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLL -->
+  <section class="section poll-section" id="poll">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Public opinion</span>
+        <h2>Who is the <span class="gradient-text">actual GOAT?</span></h2>
+        <p>
+          Cast your vote. Choose wisely. Your friendship with the contestants
+          may or may not be affected.
+        </p>
+      </div>
+
+      <div class="card poll-card">
+        <h3>Cast your vote 🗳️</h3>
+
+        <div class="poll-options">
+          <button class="poll-option" data-vote="glenn">
+            <span>🐐 Glenn — the obvious choice</span>
+            <strong id="glennPercent">50%</strong>
+          </button>
+
+          <div class="poll-bar">
+            <div class="poll-fill" id="glennBar"></div>
+          </div>
+
+          <button class="poll-option" data-vote="emma">
+            <span>👑 Emmanuella — the challenger</span>
+            <strong id="emmaPercent">50%</strong>
+          </button>
+
+          <div class="poll-bar">
+            <div class="poll-fill" id="emmaBar"></div>
+          </div>
+        </div>
+
+        <p class="poll-result" id="pollResult" aria-live="polite">
+          The results are waiting for your vote.
+        </p>
+
+        <button class="btn btn-blue" id="resetPoll">Reset local poll</button>
+
+        <p class="small-note">
+          Important: this is a playful demo poll. Votes are stored only in
+          this browser and are not shared with other visitors. The initial
+          50/50 split is illustrative, not real survey data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section" id="quiz">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Knowledge check</span>
+        <h2>The GOAT <span class="gradient-text">Quiz.</span></h2>
+        <p>
+          Five questions. Let's establish whether you actually know the
+          contestants or whether you just came here to vote for yourself.
+        </p>
+      </div>
+
+      <div class="card quiz-card">
+        <div id="quizPlay">
+          <div class="quiz-meta">
+            <span id="questionCounter">Question 1 of 5</span>
+            <span id="scoreCounter">Score: 0</span>
+          </div>
+
+          <div class="quiz-progress">
+            <div class="quiz-progress-fill" id="quizProgress"></div>
+          </div>
+
+          <h3 class="quiz-question" id="quizQuestion">
+            Loading question...
+          </h3>
+
+          <div class="quiz-answers" id="quizAnswers"></div>
+
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+
+          <div class="quiz-footer">
+            <span class="subtitle">No cheating. The contestants are watching.</span>
+            <button class="btn" id="nextQuestion" disabled>Next →</button>
+          </div>
+        </div>
+
+        <div id="quizResult" class="quiz-result" hidden>
+          <span class="eyebrow">Final result</span>
+          <h3>Quiz completed!</h3>
+          <div class="score" id="finalScore">0/5</div>
+          <p id="finalMessage"></p>
+          <br>
+          <button class="btn" id="restartQuiz">Try again ↻</button>
+          <button class="btn btn-blue" id="celebrateButton">Celebrate 🎉</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="section music-section" id="music">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Outside the courtroom</span>
+        <h2>The <span class="gradient-text">Soundtrack.</span></h2>
+        <p>
+          A GOAT needs a soundtrack. Here's the musical territory
+          Glenn operates in.
+        </p>
+      </div>
+
+      <div class="music-grid">
+        <article class="music-card">
+          <div class="music-icon">🌍</div>
+          <h3>Afrobeats</h3>
+          <p>Good rhythms, good energy and tracks that make a playlist better.</p>
+        </article>
+
+        <article class="music-card">
+          <div class="music-icon">🌙</div>
+          <h3>R&B</h3>
+          <p>For the late-night listening sessions and the quieter moods.</p>
+        </article>
+
+        <article class="music-card">
+          <div class="music-icon">🎧</div>
+          <h3>Pop & Everything Else</h3>
+          <p>Range is important. The playlist doesn't believe in unnecessary restrictions.</p>
+        </article>
+      </div>
+
+      <p class="music-disclaimer">
+        The musical verdict is still under review. Emmanuella is welcome to submit evidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE SOFT SPOT -->
+  <section class="section emma-section" id="emmanuella">
+    <div class="container">
+      <div class="emma-love">
+        <div class="emma-love-header">
+          <div class="emma-heart">💜</div>
+          <span class="eyebrow">The part where I get serious</span>
+          <h2>A little appreciation for <span class="gradient-text">Emmanuella.</span></h2>
+          <p>
+            Okay, enough of the GOAT debate for a second.
+            Some things deserve to be said without a punchline attached.
+          </p>
+        </div>
+
+        <div class="emma-message">
+          <p>
+            For all the jokes on this website, Emmanuella really is an
+            incredible person. She's funny in a way that makes ordinary
+            moments better, caring in ways that matter, and genuinely
+            someone you appreciate having around.
+          </p>
+
+          <p>
+            She's the kind of person who's difficult to sum up in a few
+            sentences because there's more to her than a list of good
+            qualities. She's thoughtful, she's got her own personality,
+            and she brings something special just by being herself.
+          </p>
+
+          <p>
+            And yes, before she starts celebrating, she's also a karate
+            red belt. So I will acknowledge that she's capable, talented,
+            and probably not the person I should annoy too much. 😂
+          </p>
+        </div>
+
+        <div class="emma-traits">
+          <div class="emma-trait">
+            <span>😂</span>
+            <div>
+              <strong>Actually hilarious</strong>
+              <p>She can make you laugh without even trying that hard.</p>
+            </div>
+          </div>
+
+          <div class="emma-trait">
+            <span>💗</span>
+            <div>
+              <strong>Genuinely caring</strong>
+              <p>She has a good heart, and that means more than people sometimes realise.</p>
+            </div>
+          </div>
+
+          <div class="emma-trait">
+            <span>✨</span>
+            <div>
+              <strong>One of a kind</strong>
+              <p>There's something about her that a checklist simply cannot explain.</p>
+            </div>
+          </div>
+
+          <div class="emma-trait">
+            <span>🥋</span>
+            <div>
+              <strong>Karate red belt</strong>
+              <p>Certified evidence that the confidence is not entirely for decoration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="emma-banters">
+          <h3>However, a few matters remain unresolved. 👀</h3>
+          <ul>
+            <li>The cooking department is still undergoing quality assurance.</li>
+            <li>Being a karate red belt does not automatically make someone the GOAT of everything.</li>
+            <li>Being funny and caring is impressive, but I still expect a formal challenge for the title.</li>
+            <li>She is allowed to be amazing without winning every single argument. We have to maintain standards.</li>
+          </ul>
+        </div>
+
+        <div class="emma-verdict">
+          <h3>On a genuinely serious note 💜</h3>
+          <p>
+            Emmanuella, you're an amazing person. You're funny, caring,
+            special, and so much more than a few words on a screen can
+            explain. You deserve to know that you're appreciated for who
+            you are, not just for what you can do or how much you make
+            people laugh.
+          </p>
+
+          <p style="margin-top: 13px;">
+            This whole website is a joke about who's the GOAT, but the
+            respect and appreciation behind this section aren't a joke.
+            You really are someone worth appreciating.
+          </p>
+
+          <p class="emma-signoff">
+            You're awesome. Just don't let this section go to your head. 😂💜
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-title">THE GOAT DEBATE 🐐</div>
+      <p>Created with confidence, questionable impartiality, and a little affection.</p>
+      <p class="footer-small">
+        All rivalry is playful. The appreciation is genuine.
+      </p>
+      <a href="#home" class="back-top">Back to the top ↑</a>
+    </div>
+  </footer>
+
+  <div class="celebration" id="celebration" aria-hidden="true"></div>
+
+  <script>
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    /* =========================
+       ROAST GENERATOR
+    ========================= */
+    const roastOutput = document.getElementById("roastOutput");
+
+    const roasts = {
+      glenn: [
+        "Bro put 'self-certified GOAT' on his résumé. Even the certificates are self-employed. 😭",
+        "U20 academy football, BJJ blue belt, boxing and gaming. Man collected hobbies like they're trophies.",
+        "Glenn built an entire website to prove he's the GOAT. The confidence is doing more work than the evidence.",
+        "He says he's better at every game. Emmanuella has been advised to request a rematch before accepting these claims.",
+        "A man who writes his own GOAT website and calls himself impartial. The investigation continues. 💀",
+        "The website has excellent design. The humility department, unfortunately, is still under construction."
+      ],
+
+      emma: [
+        "Karate red belt, incredible personality, amazing humour. The cooking department is the only department still hiring. 🍳",
+        "Emmanuella is so confident she could probably challenge the website itself to a fight.",
+        "Her comedy is elite. Her cooking has requested more time to prepare its defence.",
+        "She wants the GOAT title, but has she considered submitting a properly formatted application?",
+        "She's genuinely amazing, which is inconvenient because roasting her is getting difficult. 😭",
+        "Red belt energy with a side of 'I know I'm right.' The confidence is undefeated."
+      ],
+
+      both: [
+        "One made a website to prove he's the GOAT. The other is probably going to argue with the website. Nobody is winning here.",
+        "Glenn has the confidence. Emmanuella has the karate belt. The rest of us should probably stay out of it.",
+        "This rivalry has two contestants, zero impartial judges, and an alarming amount of confidence.",
+        "They could settle the debate peacefully, but then neither of them would get to say 'I told you so.'",
+        "One thinks he's the GOAT. One thinks she might be. At least they're both committed to the delusion. 💜"
+      ]
+    };
+
+    function generateRoast(target) {
+      const options = roasts[target];
+      const randomIndex = Math.floor(Math.random() * options.length);
+      roastOutput.textContent = options[randomIndex];
+    }
+
+    document.getElementById("roastGlenn").addEventListener("click", () => {
+      generateRoast("glenn");
+    });
+
+    document.getElementById("roastEmma").addEventListener("click", () => {
+      generateRoast("emma");
+    });
+
+    document.getElementById("roastBoth").addEventListener("click", () => {
+      generateRoast("both");
+    });
+
+    /* =========================
+       INTERACTIVE LOCAL POLL
+       This is a local demo, not a
+       shared internet-wide poll.
+    ========================= */
+    const pollButtons = document.querySelectorAll("[data-vote]");
+    const glennPercent = document.getElementById("glennPercent");
+    const emmaPercent = document.getElementById("emmaPercent");
+    const glennBar = document.getElementById("glennBar");
+    const emmaBar = document.getElementById("emmaBar");
+    const pollResult = document.getElementById("pollResult");
+
+    const initialPoll = {
+      glenn: 50,
+      emma: 50,
+      voted: null
+    };
+
+    let poll = { ...initialPoll };
+
+    try {
+      const savedPoll = localStorage.getItem("goatDebatePoll");
+      if (savedPoll) {
+        const parsed = JSON.parse(savedPoll);
+        if (
+          typeof parsed.glenn === "number" &&
+          typeof parsed.emma === "number" &&
+          parsed.glenn >= 0 &&
+          parsed.emma >= 0 &&
+          parsed.glenn + parsed.emma > 0
+        ) {
+          poll = parsed;
+        }
+      }
+    } catch (error) {
+      // The poll still works if browser storage is unavailable.
+    }
+
+    function renderPoll() {
+      const total = poll.glenn + poll.emma || 1;
+      const g = Math.round((poll.glenn / total) * 100);
+      const e = 100 - g;
+
+      glennPercent.textContent = g + "%";
+      emmaPercent.textContent = e + "%";
+      glennBar.style.width = g + "%";
+      emmaBar.style.width = e + "%";
+
+      pollButtons.forEach(button => {
+        const selected = button.dataset.vote === poll.voted;
+        button.classList.toggle("selected", selected);
+        button.disabled = Boolean(poll.voted);
+      });
+
+      if (poll.voted) {
+        pollResult.textContent =
+          poll.voted === "glenn"
+            ? "Vote recorded locally. Glenn is already preparing his victory speech. 🐐"
+            : "Vote recorded locally. Emmanuella has entered the chat. 👑";
+      } else {
+        pollResult.textContent =
+          "Demo results: a deliberately fictional starting split. Cast your vote!";
+      }
+    }
+
+    pollButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        if (poll.voted) return;
+
+        const choice = button.dataset.vote;
+
+        // The first vote creates a simple illustrative local result.
+        // It is not a real poll and is not sent to a server.
+        if (choice === "glenn") {
+          poll.glenn = 51;
+          poll.emma = 49;
+        } else {
+          poll.glenn = 49;
+          poll.emma = 51;
+        }
+
+        poll.voted = choice;
+
+        try {
+          localStorage.setItem("goatDebatePoll", JSON.stringify(poll));
+        } catch (error) {
+          // Voting remains usable for the current page session.
+        }
+
+        renderPoll();
+      });
+    });
+
+    document.getElementById("resetPoll").addEventListener("click", () => {
+      poll = { ...initialPoll };
+
+      try {
+        localStorage.removeItem("goatDebatePoll");
+      } catch (error) {
+        // Nothing else is required.
+      }
+
+      renderPoll();
+    });
+
+    renderPoll();
+
+    /* =========================
+       INTERACTIVE QUIZ
+    ========================= */
+    const questions = [
+      {
+        question: "What level of football does Glenn play?",
+        answers: [
+          "U20 academy level",
+          "Professional Formula 1",
+          "International chess",
+          "Competitive cooking"
+        ],
+        correct: 0,
+        explanation: "Correct! U20 academy-level football is on the résumé."
+      },
+      {
+        question: "What is Glenn's Brazilian Jiu-Jitsu belt?",
+        answers: [
+          "White belt",
+          "Blue belt",
+          "Black belt",
+          "A belt from a school uniform"
+        ],
+        correct: 1,
+        explanation: "Blue belt. The ground game has entered the conversation."
+      },
+      {
+        question: "What is Emmanuella's karate belt?",
+        answers: [
+          "Yellow belt",
+          "Black belt",
+          "Red belt",
+          "Invisible belt"
+        ],
+        correct: 2,
+        explanation: "Red belt! A very real reason not to underestimate her."
+      },
+      {
+        question: "Which gaming titles does Glenn play?",
+        answers: [
+          "Fortnite, Call of Duty and F1 26",
+          "Only cooking simulators",
+          "Only chess",
+          "He has never touched a controller"
+        ],
+        correct: 0,
+        explanation: "Correct. His claimed gaming superiority remains under review."
+      },
+      {
+        question: "What is the official verdict on Emmanuella?",
+        answers: [
+          "She has no redeeming qualities",
+          "She is only good at karate",
+          "She is amazing, but the cooking needs development",
+          "The website refuses to comment"
+        ],
+        correct: 2,
+        explanation: "Exactly. The affection is genuine; the cooking jokes are mandatory."
+      }
+    ];
+
+    let currentQuestion = 0;
+    let quizScore = 0;
+    let answered = false;
+
+    const quizPlay = document.getElementById("quizPlay");
+    const quizResult = document.getElementById("quizResult");
+    const questionCounter = document.getElementById("questionCounter");
+    const scoreCounter = document.getElementById("scoreCounter");
+    const quizProgress = document.getElementById("quizProgress");
+    const quizQuestion = document.getElementById("quizQuestion");
+    const quizAnswers = document.getElementById("quizAnswers");
+    const quizFeedback = document.getElementById("quizFeedback");
+    const nextQuestion = document.getElementById("nextQuestion");
+
+    function loadQuestion() {
+      answered = false;
+
+      const q = questions[currentQuestion];
+
+      questionCounter.textContent =
+        `Question ${currentQuestion + 1} of ${questions.length}`;
+
+      scoreCounter.textContent = `Score: ${quizScore}`;
+      quizProgress.style.width =
+        `${(currentQuestion / questions.length) * 100}%`;
+
+      quizQuestion.textContent = q.question;
+      quizAnswers.innerHTML = "";
+      quizFeedback.textContent = "";
+      nextQuestion.disabled = true;
+      nextQuestion.textContent =
+        currentQuestion === questions.length - 1
+          ? "See results →"
+          : "Next →";
+
+      q.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.className = "quiz-answer";
+        button.textContent = answer;
+
+        button.addEventListener("click", () => selectAnswer(index));
+
+        quizAnswers.appendChild(button);
+      });
+    }
+
+    function selectAnswer(selectedIndex) {
+      if (answered) return;
+
+      answered = true;
+
+      const q = questions[currentQuestion];
+      const buttons = quizAnswers.querySelectorAll("button");
+      const isCorrect = selectedIndex === q.correct;
+
+      if (isCorrect) {
+        quizScore++;
+        quizFeedback.textContent = "Correct! " + q.explanation;
+        quizFeedback.style.color = "#23825b";
+      } else {
+        quizFeedback.textContent =
+          "Not quite! The correct answer is: " +
+          q.answers[q.correct] + ".";
+        quizFeedback.style.color = "#c04465";
+      }
+
+      buttons.forEach((button, index) => {
+        button.disabled = true;
+
+        if (index === q.correct) {
+          button.classList.add("correct");
+        } else if (index === selectedIndex) {
+          button.classList.add("incorrect");
+        }
+      });
+
+      scoreCounter.textContent = `Score: ${quizScore}`;
+      nextQuestion.disabled = false;
+    }
+
+    function showQuizResult() {
+      quizPlay.hidden = true;
+      quizResult.hidden = false;
+
+      document.getElementById("finalScore").textContent =
+        `${quizScore}/${questions.length}`;
+
+      let message;
+
+      if (quizScore === 5) {
+        message = "Perfect score! You know the contestants suspiciously well. The GOAT Council is impressed. 🏆";
+      } else if (quizScore >= 3) {
+        message = "Solid performance! You clearly paid attention to the evidence.";
+      } else {
+        message = "A questionable performance. Perhaps another review of the résumé is required. 😭";
+      }
+
+      document.getElementById("finalMessage").textContent = message;
+      quizProgress.style.width = "100%";
+    }
+
+    nextQuestion.addEventListener("click", () => {
+      if (!answered) return;
+
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        loadQuestion();
+      } else {
+        showQuizResult();
+      }
+    });
+
+    document.getElementById("restartQuiz").addEventListener("click", () => {
+      currentQuestion = 0;
+      quizScore = 0;
+      quizResult.hidden = true;
+      quizPlay.hidden = false;
+      loadQuestion();
+    });
+
+    /* =========================
+       CONFETTI CELEBRATION
+    ========================= */
+    function celebrate() {
+      const area = document.getElementById("celebration");
+      const symbols = ["💜", "💙", "✨", "🎉", "🐐", "👑"];
+
+      for (let i = 0; i < 45; i++) {
+        const piece = document.createElement("span");
+        piece.className = "confetti";
+        piece.textContent =
+          symbols[Math.floor(Math.random() * symbols.length)];
+
+        piece.style.left = Math.random() * 100 + "%";
+        piece.style.animationDuration = (2 + Math.random() * 3) + "s";
+        piece.style.animationDelay = Math.random() * 0.8 + "s";
+        piece.style.fontSize = (15 + Math.random() * 17) + "px";
+
+        area.appendChild(piece);
+
+        piece.addEventListener("animationend", () => {
+          piece.remove();
+        });
+      }
+    }
+
+    document.getElementById("celebrateButton").addEventListener("click", celebrate);
+
+    // Start the quiz when the page loads.
+    loadQuestion();
+  </script>
+
+</body>
+</html>
